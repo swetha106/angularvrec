@@ -29,14 +29,12 @@ public class User {
 	
 	  private String password;
 	  
-	  @DateTimeFormat(pattern = "dd/MM/yyyy")
-	  @Temporal(value=TemporalType.DATE)
-	  private Date dob;
-	
+	 
 	  private String email;
 	  private String phone;
 	  
 	  
+	
 	 
 	  public String getUsername() {
 	    return username;
@@ -79,21 +77,11 @@ public class User {
 	  public void setPhone(String phone) {
 	    this.phone = phone;
 	  }
-	  public Date getDob() {
-		    return dob;
-		  }
-
-		  public void setDob(Date dob) {
-		    this.dob = dob;
-		  }
-		  
-		  
-		 
-		  
+	
 		  
 	  @Override
 		public String toString() {
-			return "User [id=" + id +"username=" + username + ", password=" + password  + ", dob=" + dob+", email=" + email + ",phone="+phone+"]";
+			return "User [id=" + id +"username=" + username + ", password=" + password  + ",  email=" + email + ",phone="+phone+"]";
 		}
 
 }

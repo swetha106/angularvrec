@@ -2,6 +2,7 @@ package com.vrecruit.entities;
 
 
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,10 +31,10 @@ public class JobProcessDetails {
 	private CommonsMultipartFile resume;
 	
 
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL )
 	private User user;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL )
 	private JobApplication jobApplication;
 
 	public Long getJobid() {
@@ -102,7 +103,7 @@ public class JobProcessDetails {
 	@Override
 	public String toString() {
 		return "JobProcessDetails [jobid=" + jobid + ", currentround=" + currentround + ", marks=" + marks
-				+ ", selected=" + selected + ", resume=" + resume + ", user=" + user
+				+ ", selected=" + selected +  ", user=" + user
 				+ ", jobApplication=" + jobApplication + "]";
 	}
 
