@@ -14,6 +14,8 @@ import javax.persistence.Table;
 
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 @Entity
 @Table(name = "jobprocess")
 public class JobProcessDetails {
@@ -27,8 +29,8 @@ public class JobProcessDetails {
 	private int marks;
 	private boolean selected;
 	
-	
-	private CommonsMultipartFile resume;
+	   
+	private String resume;
 	
 
 	@OneToOne(cascade=CascadeType.ALL )
@@ -84,11 +86,11 @@ public class JobProcessDetails {
 		return currentround;
 	}
 
-	public CommonsMultipartFile getResume() {
+	public String getResume() {
 		return resume;
 	}
 
-	public void setResume(CommonsMultipartFile resume) {
+	public void setResume(String resume) {
 		this.resume = resume;
 	}
 

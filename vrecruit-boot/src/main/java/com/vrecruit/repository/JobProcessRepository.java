@@ -15,8 +15,11 @@ import com.vrecruit.entities.User;
 public interface JobProcessRepository extends JpaRepository<JobProcessDetails, Long> {
 	
 	public Collection<JobProcessDetails> findByJobApplication(Optional<JobApplication> obj);
-	public Optional<JobProcessDetails> findByUser(Optional<User>  user);
+	public Optional<JobProcessDetails> findByUser(Optional<User>  userobj);
+	public Optional<JobProcessDetails> findByJobid(long id);
 	//public void save(JobProcessDetails> user);
+	//public JobApplication findByJid(Long jid);
+	
 	
 
 }

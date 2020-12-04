@@ -11,5 +11,6 @@ import com.vrecruit.entities.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 	public User findByEmail(String email);
-	public  Optional<User>  findById(long id);
+	public  User  findById(long id);
+	//public User findByUId(Long id);
 }

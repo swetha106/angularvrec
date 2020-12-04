@@ -10,6 +10,8 @@ import com.vrecruit.entities.User;
 
 @Repository
 public interface JobApplicationRepository extends JpaRepository<JobApplication,Long>{
-	public Optional<JobApplication> findByJid(Long jid);
+	public JobApplication findByJid(Long jid);
+
+//	public JobApplication findByJid(Long jid);
 
 }
